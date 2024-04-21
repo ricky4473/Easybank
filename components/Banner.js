@@ -72,7 +72,7 @@ const Banner = () => {
       <div className="first flex lg:flex-row flex-col-reverse">
         <div className="md:py-[150px] py-10 md:pl-[10%] px-[10%] lg:mt-0 mt-52">
           <h1 className="text-[#363755] leading-tight md:w-[500px] text-6xl text-start w-full">
-          Next generation digital banking
+            Next generation digital banking
           </h1>
           <p className="text-gray-400 md:w-[500px] w-full mt-10 text-start text-[20px] mb-6">
             Take your financial life online. Your Easybank account will be a one-stop-shop for
@@ -115,9 +115,9 @@ const Banner = () => {
       <div className="third px-[10%]  mt-20">
         <h1 className="text-slate-800 text-4xl font-semibold py-6">Latest Articles</h1>
         <div className="flex flex-wrap gap-5">
-          {ARTICLES_DATA.map(article => {
+          {ARTICLES_DATA.map((article, index) => {
             return (
-              <Articles src={article.src} author={article.author} title={article.title}>
+              <Articles key={index} src={article.src} author={article.author} title={article.title}>
                 {article.paragraph}
               </Articles>
             )
